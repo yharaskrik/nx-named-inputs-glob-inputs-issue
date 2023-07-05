@@ -16,10 +16,8 @@ WORKDIR /app
 RUN addgroup --system api && adduser --system -G api api
 
 COPY dist/apps/api .
-RUN chown -R api:api .
 
-# You can remove this install step if you build with `--bundle` option.
-# The bundled output will include external dependencies.
+RUN chown -R api:api .
 RUN yarn install
 
 CMD ["dumb-init", "node", "main.js" ]

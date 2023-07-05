@@ -14,7 +14,7 @@
       "inputs": ["production", "^production"]
     },
     "docker-build": {
-      "inputs": ["dockerizeFiles", "production"]
+      "inputs": ["production", "dockerizeFiles"]
     }
   },
   "namedInputs": {
